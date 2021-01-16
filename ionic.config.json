@@ -1,0 +1,8 @@
+{
+  "name": "Spotest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "17772074"
+}
