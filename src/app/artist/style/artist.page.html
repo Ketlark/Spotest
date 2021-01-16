@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Spotest
+      </ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>{{artistName}}</ion-card-title>
+            <ion-card-subtitle>Ses albums</ion-card-subtitle>
+        </ion-card-header>    
+    </ion-card>
+    <ion-card>
+        <ion-grid>
+           <ion-row>
+             <ion-col size="2" *ngFor="let album of albums">
+                <ion-card id="artist-card" button (click)="goToTracks(album.id)" >
+                  <img src="{{album.images[0].url}}" width="150" height="150"/>
+                  <ion-card-header>
+                    <ion-card-title>{{album.name}}</ion-card-title>
+                    <ion-card-subtitle>Nombre de tracks : {{album.total_tracks}}</ion-card-subtitle>
+                  </ion-card-header>
+                </ion-card>
+             </ion-col>
+           </ion-row>
+        </ion-grid>
+      </ion-card>
+</ion-content>
+
+  

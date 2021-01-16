@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Spotest
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let track of tracks">
+    <ion-label>{{track.name}} - {{getTimeOfTrack(track.duration_ms)}}</ion-label>
+    <ion-button (click)="playPreview(track.preview_url)">Play preview</ion-button>
+  </ion-item>
+</ion-content>
+

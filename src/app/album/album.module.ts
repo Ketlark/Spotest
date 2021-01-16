@@ -2,18 +2,16 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { TabsPageRoutingModule } from './tabs-routing.module';
-
-import { TabsPage } from './tabs.page';
+import { AlbumPage } from './album.page';
+import { AlbumPageRouting } from './album-routing.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule
+    AlbumPageRouting
   ],
-  declarations: [TabsPage]
+  declarations: [AlbumPage]
 })
-export class TabsPageModule {}
+export class AlbumModule {}
